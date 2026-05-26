@@ -3,67 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SMP Global | International Ship Management & Marine Services</title>
+    <title>SMP Global | International Shipping & Logistics</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* Smooth scrolling for page links */
         html { scroll-behavior: smooth; }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans">
 
-    <nav class="bg-[#0B2240] text-white sticky top-0 z-50 shadow-lg border-b border-blue-900">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <nav class="bg-[#0B2240] text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center relative">
             
             <div class="flex items-center space-x-3">
-                <img src="lgp.png" alt="SMP Global Logo" class="h-12 w-auto bg-white p-1 rounded shadow-sm">
-                <span class="text-xl font-bold tracking-wider text-gray-100">SMP GLOBAL</span>
+                <img src="lgp.png" alt="SMP Global Logo" class="h-20 w-auto">
+                <span class="text-xl font-bold tracking-wider">SMP GLOBAL</span>
             </div>
 
-            <div class="hidden lg:flex space-x-8 font-medium text-sm tracking-wide">
-                <a href="#services" class="hover:text-blue-400 transition duration-200">Services</a>
-                <a href="#strategies" class="hover:text-blue-400 transition duration-200">Strategies</a>
-                <a href="#insights" class="hover:text-blue-400 transition duration-200">Insights & News</a>
-                <a href="#circulars" class="hover:text-blue-400 transition duration-200">Circulars</a>
-                <a href="#hsse" class="hover:text-blue-400 transition duration-200">HSSE Reporting</a>
-                <a href="#management" class="hover:text-blue-400 transition duration-200">Management</a>
-                <a href="#office" class="hover:text-blue-400 transition duration-200">Head Office</a>
-                <a href="#careers" class="hover:text-blue-400 transition duration-200">Careers</a>
+            <div class="hidden md:flex space-x-8 font-medium py-4 items-center">
+
+                <div class="relative group">
+                    <a href="#" class="hover:text-blue-400 transition py-4 flex items-center">Services & Strategy ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Services & Strategy ▼</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="#services" class="hover:text-blue-400 transition block">Services</a></li>
+                            <li><a href="insights.html" class="hover:text-blue-400 transition block">Strategies</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="#" class="hover:text-blue-400 transition py-4 flex items-center">Media & News ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Media & News ▼</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="insights.html" class="hover:text-blue-400 transition block">Insights & News</a></li>
+                            <li><a href="circulars.html" class="hover:text-blue-400 transition block">Circulars</a></li>
+                            <li><a href="#" class="hover:text-blue-400 transition block">Team Briefing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="#" class="hover:text-blue-400 transition py-4 flex items-center">Portals / Reporting ▼</a>
+                    <div class="absolute right-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-64 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Portals / Reporting ▼</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="#" class="hover:text-blue-400 transition block">HSSE Reporting</a></li>
+                            <li><a href="#" class="hover:text-blue-400 transition block">Condolences</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                 <div class="relative group">
+                    <a href="index.html" class="hover:text-blue-400 transition py-4 flex items-center">About Us ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">About Us ▼</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="headoffice.html" class="hover:text-blue-400 transition block">Head Office</a></li>
+                            <li><a href="#" class="hover:text-blue-400 transition block">Management Contacts</a></li>
+                            <li><a href="careers.html" class="hover:text-blue-400 transition block">Recruitment / Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
 
-            <div>
-                <a href="#contact" class="bg-blue-600 text-white px-5 py-2.5 rounded font-semibold text-xs tracking-wider uppercase hover:bg-blue-700 transition duration-200 shadow">Get a Quote</a>
+            <div class="hidden sm:block">
+                <a href="#contact" class="bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-700 transition">Get a Quote</a>
             </div>
+
+            <button id="mobile-menu-btn" class="md:hidden block text-white focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+
+            <div id="mobile-menu" class="hidden absolute top-[100%] left-0 right-0 bg-[#0B2240] border-t border-gray-700 p-6 space-y-4 shadow-xl z-50 max-h-[80vh] overflow-y-auto md:hidden">
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-400 mb-1">Services & Strategy</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="#services" class="block py-1">Services</a></li>
+                        <li><a href="insights.html" class="block py-1">Strategies</a></li>
+                    </ul>
+                </div>
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-400 mb-1">Media & News</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="insights.html" class="block py-1">Insights & News</a></li>
+                        <li><a href="circulars.html" class="block py-1">Circulars</a></li>
+                        <li><a href="#" class="block py-1">Team Briefing</a></li>
+                    </ul>
+                </div>
+                <div class="pb-2">
+                    <div class="font-bold text-blue-400 mb-1">Portals / Reporting</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="#" class="block py-1">HSSE Reporting</a></li>
+                        <li><a href="#" class="block py-1">Condolences</a></li>
+                    </ul>
+                </div>
+                 <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-400 mb-1">About Us</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="headoffice.html" class="block py-1">Head Office</a></li>
+                        <li><a href="#" class="block py-1">Management Contacts</a></li>
+                        <li><a href="careers.html" class="block py-1">Recruitment / Careers</a></li>
+                    </ul>
+                </div>
+                <a href="#contact" class="block text-center bg-blue-600 text-white px-4 py-2 rounded font-semibold">Get a Quote</a>
+            </div>
+
         </div>
     </nav>
 
-    <section class="relative bg-[#061324] text-white min-h-[70vh] flex items-center bg-cover bg-center" style="background-image: linear-gradient(rgba(6, 19, 36, 0.75), rgba(6, 19, 36, 0.85)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1920&q=80');">
-        <div class="max-w-7xl mx-auto px-6 w-full grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-                <span class="text-blue-400 text-xs font-bold uppercase tracking-widest block mb-3">Independent Ship Management</span>
-                <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-4 leading-tight text-white">Leading with Integrity.</h1>
-                <p class="text-base md:text-lg text-gray-300 mb-8 max-w-xl">SMP Global is an independent ship management company that offers skillful and high-quality marine services to the maritime industry.</p>
-                <div class="flex flex-wrap gap-4">
-                    <a href="#profile" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded text-sm font-bold tracking-wide transition shadow-md">Corporate Profile</a>
-                    <a href="#services" class="border border-gray-400 hover:bg-white hover:text-[#0B2240] text-white px-6 py-3 rounded text-sm font-bold tracking-wide transition">Our Capabilities</a>
-                </div>
+    <section id="home" class="relative bg-[#0B2240] text-white min-h-[75vh] flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(11, 34, 64, 0.75), rgba(11, 34, 64, 0.75)), url('https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1600&q=80');">
+        <div class="max-w-4xl text-center px-6">
+            <span class="text-blue-400 text-xs font-bold uppercase tracking-widest block mb-3">Independent Ship Management</span>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight mb-4">Leading with Integrity</h1>
+            <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">Providing skillful, premium marine solutions and ship management services to the global maritime industry.</p>
+            <div class="space-x-4">
+                <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg text-lg font-semibold transition inline-block">Book a Shipment</a>
+                <a href="#profile" class="border border-white hover:bg-white hover:text-[#0B2240] text-white px-8 py-3 rounded-lg text-lg font-semibold transition inline-block">Corporate Profile</a>
             </div>
         </div>
     </section>
 
-    <section id="profile" class="py-20 bg-white border-b border-gray-100">
+    <section id="profile" class="py-20 bg-white border-b border-gray-200">
         <div class="max-w-7xl mx-auto px-6">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
                 
-                <div class="lg:col-span-2 space-y-8">
-                    <div>
-                        <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest mb-2">Company Profile</h2>
-                        <p class="text-2xl font-bold text-[#0B2240] leading-relaxed">
-                            SMP Global is an independent ship management company that offers skillful and high quality Marine Services.
-                        </p>
-                    </div>
-                    
-                    <div class="p-6 bg-gray-50 rounded-xl border-l-4 border-blue-600 shadow-sm">
+                <div class="lg:col-span-2 space-y-6">
+                    <h2 class="text-xs font-bold text-blue-600 uppercase tracking-widest">Company Profile</h2>
+                    <p class="text-2xl font-bold text-[#0B2240] leading-relaxed">
+                        SMP Global is an independent ship management company that offers skillful and high quality Marine Services to the global shipping industry.
+                    </p>
+                    <div class="p-6 bg-gray-50 rounded-xl border-l-4 border-blue-600">
                         <h3 class="text-sm font-bold text-[#0B2240] uppercase tracking-wider mb-2">Our Vision</h3>
                         <p class="text-gray-600 italic leading-relaxed">
                             "Leading with integrity and provide quality seafarers / ship management services to the Marine Industry."
@@ -71,125 +144,124 @@
                     </div>
                 </div>
 
-                <div class="bg-[#0B2240] text-white p-8 rounded-2xl shadow-xl flex flex-col justify-between">
-                    <div>
-                        <h3 class="text-lg font-bold tracking-wider mb-6 pb-2 border-b border-blue-800">Our Strategic Pillars</h3>
-                        <ul class="space-y-4">
-                            <li class="flex items-start space-x-3">
-                                <span class="bg-blue-600 text-white p-1 rounded-full text-xs font-bold px-2.5">1</span>
-                                <div>
-                                    <strong class="block text-gray-200">People</strong>
-                                    <span class="text-xs text-gray-400">Supporting expert seafarers & shore staff worldwide.</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="bg-blue-600 text-white p-1 rounded-full text-xs font-bold px-2.5">2</span>
-                                <div>
-                                    <strong class="block text-gray-200">Data</strong>
-                                    <span class="text-xs text-gray-400">Utilizing tech insight for seamless navigation.</span>
-                                </div>
-                            </li>
-                            <li class="flex items-start space-x-3">
-                                <span class="bg-blue-600 text-white p-1 rounded-full text-xs font-bold px-2.5">3</span>
-                                <div>
-                                    <strong class="block text-gray-200">Customer Satisfaction</strong>
-                                    <span class="text-xs text-gray-400">Delivering secure and trusted logistics results.</span>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
+                <div class="bg-[#0B2240] text-white p-8 rounded-2xl shadow-lg">
+                    <h3 class="text-lg font-bold tracking-wider mb-6 pb-2 border-b border-blue-900">Strategic Pillars</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-start space-x-3">
+                            <span class="bg-blue-600 text-white rounded-full text-xs font-bold px-2.5 py-0.5 mt-1">1</span>
+                            <div>
+                                <strong class="block text-gray-200">People</strong>
+                                <span class="text-xs text-gray-400">Supporting expert seafarers & global onshore teams.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="bg-blue-600 text-white rounded-full text-xs font-bold px-2.5 py-0.5 mt-1">2</span>
+                            <div>
+                                <strong class="block text-gray-200">Data</strong>
+                                <span class="text-xs text-gray-400">Utilizing predictive insights for precise maritime operations.</span>
+                            </div>
+                        </li>
+                        <li class="flex items-start space-x-3">
+                            <span class="bg-blue-600 text-white rounded-full text-xs font-bold px-2.5 py-0.5 mt-1">3</span>
+                            <div>
+                                <strong class="block text-gray-200">Customer Satisfaction</strong>
+                                <span class="text-xs text-gray-400">Delivering reliable, secure, and world-class contract results.</span>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <section id="services" class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold text-[#0B2240] mb-3">Our Logistics Capabilities</h2>
-                <p class="text-gray-600 max-w-xl mx-auto">Providing seamless end-to-end management across all international supply channels.</p>
+    <section id="services" class="py-20 px-6 max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-[#0B2240] mb-4">Our Logistics Capabilities</h2>
+            <p class="text-gray-600 max-w-xl mx-auto">We manage your supply chain seamlessly from origin to destination.</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                <img src="https://images.unsplash.com/photo-1494412574643-ff11b0a5c1c3?auto=format&fit=crop&w=600&q=80" alt="Ocean Freight" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#0B2240] mb-2">🚢 Ocean Freight</h3>
+                    <p class="text-gray-600">Cost-effective shipping for large cargo volumes. Offering both FCL (Full Container) and LCL (Less than Container) options globally.</p>
+                </div>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=600&q=80" alt="Ocean Vessel" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-[#0B2240] mb-2">🚢 Ocean Freight</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">Cost-effective global shipping options for major container volumes, managing both full and partial cargo allocations with ease.</p>
-                    </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Air Freight" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#0B2240] mb-2">✈️ Air Freight</h3>
+                    <p class="text-gray-600">Time-critical delivery services across major international hubs. Fast, secure, and fully coordinated customs processing.</p>
                 </div>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=600&q=80" alt="Air Cargo Logistics" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-[#0B2240] mb-2">✈️ Air Freight</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">Expedited, time-critical air logistics serving major international hubs with fully integrated priority customs clearance workflows.</p>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="Logistics Trucking" class="w-full h-52 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-[#0B2240] mb-2">🚛 Ground Transport</h3>
-                        <p class="text-sm text-gray-600 leading-relaxed">Comprehensive over-the-road transport and reliable localized distribution arrays bridging port facilities straight to destination yards.</p>
-                    </div>
+            </div>
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-100 hover:shadow-lg transition">
+                <img src="https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?auto=format&fit=crop&w=600&q=80" alt="Ground Transport" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-[#0B2240] mb-2">🚛 Ground Transport</h3>
+                    <p class="text-gray-600">Comprehensive domestic and cross-border trucking. Safe tracking from warehouses directly to the final destination.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="bg-white py-20 px-6 border-t border-gray-100">
-        <div class="max-w-3xl mx-auto bg-gray-50 p-8 md:p-12 rounded-2xl shadow-inner border border-gray-100">
+    <section id="contact" class="bg-gray-100 py-20 px-6">
+        <div class="max-w-3xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-md">
             <h2 class="text-3xl font-bold text-[#0B2240] mb-2 text-center">Request a Free Shipping Quote</h2>
-            <p class="text-sm text-gray-500 text-center mb-8">Fill in your basic transport specifications below, and our freight desks will process estimates.</p>
+            <p class="text-gray-600 text-center mb-8">Provide your details below, and our freight operations team will reply shortly.</p>
             
-            <form class="space-y-6" onsubmit="alert('Quote Request Logged!'); return false;">
+            <form class="space-y-6">
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Origin Port/City</label>
-                        <input type="text" placeholder="e.g., Shanghai, China" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-white text-sm">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Origin Country/City</label>
+                        <input type="text" placeholder="e.g., Shanghai, China" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Destination Port/City</label>
-                        <input type="text" placeholder="e.g., Los Angeles, USA" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-white text-sm">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Destination Country/City</label>
+                        <input type="text" placeholder="e.g., Los Angeles, USA" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                     </div>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                        <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Total Cargo Weight (kg)</label>
-                        <input type="number" placeholder="Weight metrics" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-white text-sm">
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Cargo Weight (kg)</label>
+                        <input type="number" placeholder="Total weight" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                     </div>
                     <div>
-                        <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Preferred Freight Mode</label>
-                        <select class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-white text-sm">
-                            <option>Ocean Vessel Freight</option>
-                            <option>Express Air Freight</option>
-                            <option>Ground Hub Trucking</option>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Freight Mode</label>
+                        <select class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                            <option>Ocean Freight</option>
+                            <option>Air Freight</option>
+                            <option>Ground Transport</option>
                         </select>
                     </div>
                 </div>
                 <div>
-                    <label class="block text-xs font-bold uppercase text-gray-600 mb-2">Corporate Email Address</label>
-                    <input type="email" placeholder="operations@company.com" class="w-full p-3 border border-gray-300 rounded focus:outline-none focus:border-blue-500 bg-white text-sm" required>
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Your Email Address</label>
+                    <input type="email" placeholder="name@company.com" class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
                 </div>
-                <button type="submit" class="w-full bg-[#0B2240] hover:bg-[#123461] text-white p-4 rounded font-bold text-sm tracking-widest uppercase transition shadow-md">Submit Request</button>
+                <button type="submit" onclick="alert('Quote Request Submitted!'); return false;" class="w-full bg-[#0B2240] hover:bg-[#123461] text-white p-4 rounded-lg font-bold text-lg transition shadow-md">Submit Quote Request</button>
             </form>
         </div>
     </section>
 
-    <footer class="bg-[#061324] text-gray-400 py-12 text-sm border-t border-gray-900">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0">
-            <div>
-                <p class="font-bold text-gray-300 tracking-wider">SMP GLOBAL</p>
-                <p class="text-xs text-gray-500 mt-1">&copy; 2026 SMP Global. All regulatory rights reserved.</p>
-            </div>
-            
-            <div class="flex space-x-6 text-xs border-t md:border-t-0 border-gray-800 pt-4 md:pt-0">
-                <a href="teambriefing.html" class="hover:text-blue-400 transition">Employee Team Briefing</a>
-                <span class="text-gray-700">|</span>
-                <a href="condolences.html" class="hover:text-blue-400 transition">Corporate Condolences Portal</a>
-            </div>
-        </div>
+    <footer class="bg-[#0B2240] text-gray-400 py-8 text-center text-sm border-t border-gray-800">
+        <p>&copy; 2026 SMP Global. All rights reserved.</p>
     </footer>
 
+    <script>
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileMenu.addEventListener('click', (e) => {
+            if(e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+    </script>
 </body>
 </html>
