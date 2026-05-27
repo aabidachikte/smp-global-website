@@ -1,1 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP Global - Technical Circulars</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A2540;
+            --secondary-blue: #1C3D5A;
+            --accent-orange: #F26419;
+            --light-bg: #F4F7F9;
+            --dark-text: #222222;
+            --light-text: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--light-bg); color: var(--dark-text); line-height: 1.6; }
+        header { background-color: var(--primary-blue); color: var(--light-text); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .logo h1 { font-size: 1.5rem; letter-spacing: 1px; font-weight: 700; }
+        .logo span { color: var(--accent-orange); }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: var(--light-text); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-orange); border-bottom: 2px solid var(--accent-orange); padding-bottom: 4px; }
+        .hero { background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(28, 61, 90, 0.9)), url('https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; color: var(--light-text); text-align: center; padding: 60px 20px; }
+        .hero h2 { font-size: 2.2rem; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .page-section { background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        .section-title { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 25px; border-bottom: 3px solid var(--accent-orange); padding-bottom: 8px; display: inline-block; }
+        .search-bar { margin-bottom: 20px; display: flex; gap: 10px; }
+        .search-bar input { flex: 1; padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; outline: none; }
+        .btn-search { background-color: var(--primary-blue); color: white; border: none; padding: 0 25px; border-radius: 4px; cursor: pointer; }
+        .circular-list { display: flex; flex-direction: column; gap: 15px; }
+        .circular-item { border: 1px solid var(--border-color); border-radius: 6px; padding: 20px; display: flex; justify-content: space-between; align-items: center; transition: all 0.2s; }
+        .circular-item:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.05); }
+        .circular-badge { color: white; padding: 4px 10px; font-size: 0.75rem; font-weight: bold; border-radius: 12px; text-transform: uppercase; }
+        .badge-technical { background-color: #17A2B8; }
+        .badge-safety { background-color: #DC3545; }
+        .badge-operations { background-color: #28A745; }
+        .btn-download { background-color: transparent; border: 1px solid var(--primary-blue); color: var(--primary-blue); padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: 500; transition: all 0.3s; }
+        .btn-download:hover { background-color: var(--primary-blue); color: white; }
+        footer { background-color: var(--primary-blue); color: var(--light-text); text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; border-top: 4px solid var(--accent-orange); }
+        @media (max-width: 768px) { header { flex-direction: column; gap: 15px; } .circular-item { flex-direction: column; align-items: flex-start; gap: 15px; } .btn-download { width: 100%; text-align: center; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>SMP <span>GLOBAL</span></h1></div>
+        <nav>
+            <ul>
+                <li><a href="hsse.html">HSSE Reporting</a></li>
+                <li><a href="circulars.html" class="active">Circulars</a></li>
+                <li><a href="contacts.html">Management Contacts</a></li>
+                <li><a href="careers.html">Careers & Recruitment</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section class="hero">
+        <h2>Fleet Technical & Quality Circulars</h2>
+        <p>SMP Global Fleet Operations Portal</p>
+    </section>
+
+    <div class="container">
+        <section class="page-section">
+            <h2 class="section-title">Technical & Safety Circulars</h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Search circulars by keyword, number, or amendment...">
+                <button class="btn-search">Search</button>
+            </div>
+
+            <div class="circular-list">
+                <div class="circular-item">
+                    <div>
+                        <span class="circular-badge badge-safety">Safety</span>
+                        <h3 style="margin-top: 5px; font-size:1.1rem;">Cir 2026/04 - Enhanced Maintenance of Lifeboat Release Gears</h3>
+                        <p style="font-size: 0.85rem; color:#666;">Issued: May 15, 2026 | Target: All Fleet Masters</p>
+                    </div>
+                    <a href="#" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+                </div>
+
+                <div class="circular-item">
+                    <div>
+                        <span class="circular-badge badge-technical">Technical</span>
+                        <h3 style="margin-top: 5px; font-size:1.1rem;">Cir 2026/03 - Biofuel Blends Management Compliance</h3>
+                        <p style="font-size: 0.85rem; color:#666;">Issued: April 28, 2026 | Target: Engine Department</p>
+                    </div>
+                    <a href="#" class="btn-download"><i class="fa-solid fa-file-pdf"></i> Download PDF</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SMP Global Shipping & Management Company. ISM & ISO Certified.</p>
+    </footer>
+</body>
+</html>
