@@ -1,1 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP Global - Seafarer Careers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0A2540;
+            --secondary-blue: #1C3D5A;
+            --accent-orange: #F26419;
+            --light-bg: #F4F7F9;
+            --dark-text: #222222;
+            --light-text: #FFFFFF;
+            --border-color: #E2E8F0;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background-color: var(--light-bg); color: var(--dark-text); line-height: 1.6; }
+        header { background-color: var(--primary-blue); color: var(--light-text); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        .logo h1 { font-size: 1.5rem; letter-spacing: 1px; font-weight: 700; }
+        .logo span { color: var(--accent-orange); }
+        nav ul { list-style: none; display: flex; gap: 20px; }
+        nav a { color: var(--light-text); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
+        nav a:hover, nav a.active { color: var(--accent-orange); border-bottom: 2px solid var(--accent-orange); padding-bottom: 4px; }
+        .hero { background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(28, 61, 90, 0.9)), url('https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; color: var(--light-text); text-align: center; padding: 60px 20px; }
+        .hero h2 { font-size: 2.2rem; margin-bottom: 10px; }
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .page-section { background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 40px; }
+        .section-title { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 25px; border-bottom: 3px solid var(--accent-orange); padding-bottom: 8px; display: inline-block; }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .form-group { display: flex; flex-direction: column; }
+        .form-group label { font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; }
+        .form-group input, .form-group select { padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; outline: none; }
+        .btn-submit { background-color: var(--accent-orange); color: white; border: none; padding: 14px 28px; font-size: 1rem; font-weight: 600; border-radius: 4px; cursor: pointer; transition: background 0.3s; margin-top: 15px; }
+        .job-positions { margin-top: 30px; border-top: 1px solid var(--border-color); padding-top: 30px; }
+        .job-card { border: 1px solid var(--border-color); padding: 20px; border-radius: 6px; margin-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .job-details h4 { color: var(--primary-blue); font-size: 1.2rem; }
+        .job-meta { font-size: 0.85rem; color: #666; }
+        .job-meta span { margin-right: 15px; }
+        .btn-download { background-color: transparent; border: 1px solid var(--primary-blue); color: var(--primary-blue); padding: 8px 16px; border-radius: 4px; text-decoration: none; font-weight: 500; }
+        footer { background-color: var(--primary-blue); color: var(--light-text); text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; border-top: 4px solid var(--accent-orange); }
+        @media (max-width: 768px) { .form-grid { grid-template-columns: 1fr; } header { flex-direction: column; gap: 15px; } .job-card { flex-direction: column; align-items: flex-start; gap: 15px; } .btn-download { width: 100%; text-align: center; } }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><h1>SMP <span>GLOBAL</span></h1></div>
+        <nav>
+            <ul>
+                <li><a href="hsse.html">HSSE Reporting</a></li>
+                <li><a href="circulars.html">Circulars</a></li>
+                <li><a href="contacts.html">Management Contacts</a></li>
+                <li><a href="careers.html" class="active">Careers & Recruitment</a></li>
+            </ul>
+        </nav>
+    </header>
 
+    <section class="hero">
+        <h2>Careers & Crew Recruitment Network</h2>
+        <p>SMP Global Fleet Operations Portal</p>
+    </section>
+
+    <div class="container">
+        <section class="page-section">
+            <h2 class="section-title">Recruitment & Careers at Sea</h2>
+            <form action="#" method="POST" onsubmit="alert('Application submitted.'); return false;">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="applicant-name">Full Name *</label>
+                        <input type="text" id="applicant-name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rank">Applying for Rank *</label>
+                        <select id="rank" required>
+                            <option value="">-- Select Rank --</option>
+                            <option value="master">Master</option>
+                            <option value="ce">Chief Engineer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="cv-upload">Upload Maritime CV *</label>
+                        <input type="file" id="cv-upload" accept=".pdf" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-submit">Submit Application</button>
+            </form>
+
+            <div class="job-positions">
+                <h3 style="margin-bottom: 20px; color: var(--primary-blue);">Urgent Openings Fleet-wide</h3>
+                <div class="job-card">
+                    <div class="job-details">
+                        <h4>Master Mariner - Large LPG Fleet</h4>
+                        <div class="job-meta">
+                            <span><i class="fa-solid fa-ship"></i> LPG Carrier</span>
+                            <span><i class="fa-solid fa-clock"></i> 4 Months Contract</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-download">Apply Now</a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 SMP Global Shipping & Management Company. ISM & ISO Certified.</p>
+    </footer>
+</body>
+</html>
