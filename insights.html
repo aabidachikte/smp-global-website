@@ -1,1 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMP Global - Insights & News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
+    <!-- Unified Navigation Bar -->
+    <nav class="bg-[#0B2240] text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center relative">
+            <div class="flex items-center space-x-3">
+                <img src="lgp.png" alt="SMP Global Logo" class="h-20 w-auto">
+                <span class="text-xl font-bold tracking-wider">SMP GLOBAL</span>
+            </div>
+
+            <div class="hidden md:flex space-x-8 font-medium py-4 items-center">
+                <div class="relative group">
+                    <a href="#" class="hover:text-blue-400 transition py-4 flex items-center">Services & Strategy ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Services & Strategy</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="services.html" class="hover:text-blue-400 transition block">Services</a></li>
+                            <li><a href="strategies.html" class="hover:text-blue-400 transition block">Strategies</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="#" class="text-blue-400 transition py-4 flex items-center">Media & News ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Media & News</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="insights.html" class="text-blue-400 font-semibold block">Insights & News</a></li>
+                            <li><a href="circulars.html" class="hover:text-blue-400 transition block">Circulars</a></li>
+                            <li><a href="teambriefing.html" class="hover:text-blue-400 transition block">Team Briefing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="#" class="hover:text-blue-400 transition py-4 flex items-center">Portals / Reporting ▼</a>
+                    <div class="absolute right-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-64 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Portals / Reporting</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="hsser.html" class="hover:text-blue-400 transition block">HSSE Reporting</a></li>
+                            <li><a href="condolences.html" class="hover:text-blue-400 transition block">Condolences</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="index.html" class="hover:text-blue-400 transition py-4 flex items-center">About Us ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">About Us</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="headoffice.html" class="hover:text-blue-400 transition block">Head Office</a></li>
+                            <li><a href="mcontacts.html" class="hover:text-blue-400 transition block">Management Contacts</a></li>
+                            <li><a href="careers.html" class="hover:text-blue-400 transition block">Recruitment / Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden sm:block">
+                <a href="index.html#contact" class="bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-700 transition">Get a Quote</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden block text-white focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-[100%] left-0 right-0 bg-[#0B2240] border-t border-gray-700 p-6 space-y-4 shadow-xl z-50 max-h-[80vh] overflow-y-auto md:hidden">
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-400 mb-1">Services & Strategy</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="services.html" class="block py-1">Services</a></li>
+                        <li><a href="strategies.html" class="block py-1">Strategies</a></li>
+                    </ul>
+                </div>
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-300 mb-1">Media & News</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-100">
+                        <li><a href="insights.html" class="block py-1 font-semibold text-white">Insights & News</a></li>
+                        <li><a href="circulars.html" class="block py-1 text-gray-300">Circulars</a></li>
+                        <li><a href="teambriefing.html" class="block py-1 text-gray-300">Team Briefing</a></li>
+                    </ul>
+                </div>
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-400 mb-1">Portals / Reporting</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="hsser.html" class="block py-1">HSSE Reporting</a></li>
+                        <li><a href="condolences.html" class="block py-1">Condolences</a></li>
+                    </ul>
+                </div>
+                <div class="pb-2">
+                    <div class="font-bold text-blue-400 mb-1">About Us</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="headoffice.html" class="block py-1">Head Office</a></li>
+                        <li><a href="mcontacts.html" class="block py-1">Management Contacts</a></li>
+                        <li><a href="careers.html" class="block py-1">Recruitment / Careers</a></li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="block text-center bg-blue-600 text-white px-4 py-2 rounded font-semibold">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Hero Block -->
+    <section class="relative bg-[#0B2240] text-white py-12 flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(11, 34, 64, 0.85), rgba(11, 34, 64, 0.85)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-4xl text-center px-6">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-2">Corporate Insights & News</h1>
+            <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">Market Trends analysis, Fleet Expansion milestones, and Regulatory Updates</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-6xl mx-auto my-12 px-6 flex-grow w-full">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Article Card -->
+            <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-slate-300 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=600');"></div>
+                <div class="p-6">
+                    <span class="text-xs font-bold text-blue-600 uppercase tracking-widest">Fleet Growth</span>
+                    <h3 class="font-bold text-xl text-[#0B2240] mt-1 mb-2">SMP Global Secures Delivery of Two Newbuild Eco-VLGCs</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">Expanding our dual-fuel gas transit framework to address growing infrastructure supply chains across Asia-Pacific logistics frameworks cleanly.</p>
+                    <a href="#" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Read Full Release <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+
+            <!-- Article Card -->
+            <div class="bg-white rounded-xl overflow-hidden border border-gray-100 shadow-sm hover:shadow-md transition">
+                <div class="h-48 bg-slate-300 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?q=80&w=600&auto=format&fit=crop');"></div>
+                <div class="p-6">
+                    <span class="text-xs font-bold text-orange-600 uppercase tracking-widest">Industry Policy</span>
+                    <h3 class="font-bold text-xl text-[#0B2240] mt-1 mb-2">Navigating the EU ETS Structural Maritime Tax Expansions</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed mb-4">A analytical cost-benefit deep-dive prepared by our risk analysts regarding carbon allowance allocation frameworks for international tonnage metrics.</p>
+                    <a href="#" class="text-sm font-bold text-blue-600 hover:text-blue-800 flex items-center gap-1">Read Full Release <i class="fa-solid fa-arrow-right text-xs"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-[#0B2240] text-gray-400 text-center py-6 text-sm border-t-4 border-orange-500">
+        <p>&copy; 2026 SMP Global Management Group. Independent Marine Logistics Services.</p>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
