@@ -4,115 +4,171 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMP Global - HSSE Reporting</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --primary-blue: #0A2540;
-            --secondary-blue: #1C3D5A;
-            --accent-orange: #F26419;
-            --light-bg: #F4F7F9;
-            --dark-text: #222222;
-            --light-text: #FFFFFF;
-            --border-color: #E2E8F0;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
-        body { background-color: var(--light-bg); color: var(--dark-text); line-height: 1.6; }
-        header { background-color: var(--primary-blue); color: var(--light-text); padding: 1rem 5%; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
-        .logo h1 { font-size: 1.5rem; letter-spacing: 1px; font-weight: 700; }
-        .logo span { color: var(--accent-orange); }
-        nav ul { list-style: none; display: flex; gap: 20px; }
-        nav a { color: var(--light-text); text-decoration: none; font-weight: 500; font-size: 0.95rem; transition: color 0.3s; }
-        nav a:hover, nav a.active { color: var(--accent-orange); border-bottom: 2px solid var(--accent-orange); padding-bottom: 4px; }
-        .hero { background: linear-gradient(rgba(10, 37, 64, 0.85), rgba(28, 61, 90, 0.9)), url('https://images.unsplash.com/photo-1518241353330-0f7941c2d9b5?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover; color: var(--light-text); text-align: center; padding: 60px 20px; }
-        .hero h2 { font-size: 2.2rem; margin-bottom: 10px; }
-        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
-        .page-section { background: #ffffff; padding: 40px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 40px; }
-        .section-title { font-size: 1.8rem; color: var(--primary-blue); margin-bottom: 25px; border-bottom: 3px solid var(--accent-orange); padding-bottom: 8px; display: inline-block; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-        .full-width { grid-column: span 2; }
-        .form-group { display: flex; flex-direction: column; }
-        .form-group label { font-weight: 600; margin-bottom: 6px; font-size: 0.9rem; }
-        .form-group input, .form-group select, .form-group textarea { padding: 12px; border: 1px solid var(--border-color); border-radius: 4px; outline: none; font-size: 1rem; }
-        .btn-submit { background-color: var(--accent-orange); color: white; border: none; padding: 14px 28px; font-size: 1rem; font-weight: 600; border-radius: 4px; cursor: pointer; transition: background 0.3s; margin-top: 15px; width: fit-content; }
-        .btn-submit:hover { background-color: #d45312; }
-        .hsse-alert-banner { background-color: #FFF3CD; border-left: 5px solid #FFC107; padding: 15px; color: #856404; margin-bottom: 25px; border-radius: 4px; display: flex; align-items: center; gap: 15px; }
-        footer { background-color: var(--primary-blue); color: var(--light-text); text-align: center; padding: 30px 20px; margin-top: 60px; font-size: 0.9rem; border-top: 4px solid var(--accent-orange); }
-        @media (max-width: 768px) { .form-grid { grid-template-columns: 1fr; } .full-width { grid-column: span 1; } header { flex-direction: column; gap: 15px; } .btn-submit { width: 100%; text-align: center; } }
-    </style>
 </head>
-<body>
-    <header>
-        <div class="logo"><h1>SMP <span>GLOBAL</span></h1></div>
-        <nav>
-            <ul>
-                <li><a href="hsse.html" class="active">HSSE Reporting</a></li>
-                <li><a href="circulars.html">Circulars</a></li>
-                <li><a href="contacts.html">Management Contacts</a></li>
-                <li><a href="careers.html">Careers & Recruitment</a></li>
-            </ul>
-        </nav>
-    </header>
+<body class="bg-gray-50 text-gray-800 flex flex-col min-h-screen">
 
-    <section class="hero">
-        <h2>HSSE Management & Incident Reporting</h2>
-        <p>SMP Global Fleet Operations Portal</p>
-    </section>
-
-    <div class="container">
-        <section class="page-section">
-            <h2 class="section-title">Safety & Incident Reporting (Form S-101)</h2>
-            <div class="hsse-alert-banner">
-                <i class="fa-solid fa-triangle-exclamation fa-lg"></i>
-                <div><strong>Mandatory Directive:</strong> All Near-Miss events must be reported within 24 hours of occurrence in accordance with ISM Code Clause 9.</div>
+    <!-- Unified Navigation Bar -->
+    <nav class="bg-[#0B2240] text-white py-4 px-6 sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto flex justify-between items-center relative">
+            <div class="flex items-center space-x-3">
+                <img src="lgp.png" alt="SMP Global Logo" class="h-20 w-auto">
+                <span class="text-xl font-bold tracking-wider">SMP GLOBAL</span>
             </div>
 
-            <form action="#" method="POST" onsubmit="alert('Report Submitted Securely to DPA'); return false;">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="vessel">Vessel Name *</label>
-                        <input type="text" id="vessel" required placeholder="e.g. SMP MARINER">
-                    </div>
-                    <div class="form-group">
-                        <label for="imo">IMO Number *</label>
-                        <input type="text" id="imo" required placeholder="e.g. 9123456">
-                    </div>
-                    <div class="form-group">
-                        <label for="report-type">Report Classification *</label>
-                        <select id="report-type" required>
-                            <option value="">-- Select Classification --</option>
-                            <option value="near-miss">Near Miss</option>
-                            <option value="unsafe-act">Unsafe Act / Condition</option>
-                            <option value="incident">Accident / Incident</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date">Date & Time of Occurrence (UTC) *</label>
-                        <input type="datetime-local" id="date" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="location">Location / Space on Vessel</label>
-                        <select id="location">
-                            <option value="engine-room">Engine Room</option>
-                            <option value="deck">Main Deck</option>
-                            <option value="bridge">Navigation Bridge</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="file-upload">Attach Evidence / Photos (Max 10MB)</label>
-                        <input type="file" id="file-upload" accept="image/*,.pdf">
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="description">Detailed Description of Event *</label>
-                        <textarea id="description" rows="5" required placeholder="Provide clear description..."></textarea>
+            <div class="hidden md:flex space-x-8 font-medium py-4 items-center">
+                <div class="relative group">
+                    <a href="#" class="hover:text-blue-400 transition py-4 flex items-center">Services & Strategy ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Services & Strategy</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="services.html" class="hover:text-blue-400 transition block">Services</a></li>
+                            <li><a href="strategies.html" class="hover:text-blue-400 transition block">Strategies</a></li>
+                        </ul>
                     </div>
                 </div>
-                <button type="submit" class="btn-submit"><i class="fa-solid fa-paper-plane"></i> Submit Confidential HSSE Report</button>
-            </form>
-        </section>
-    </div>
 
-    <footer>
-        <p>&copy; 2026 SMP Global Shipping & Management Company. ISM & ISO Certified.</p>
+                <div class="relative group">
+                    <a href="#" class="hover:text-blue-400 transition py-4 flex items-center">Media & News ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Media & News</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="insights.html" class="hover:text-blue-400 transition block">Insights & News</a></li>
+                            <li><a href="circulars.html" class="hover:text-blue-400 transition block">Circulars</a></li>
+                            <li><a href="teambriefing.html" class="hover:text-blue-400 transition block">Team Briefing</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="#" class="text-blue-400 transition py-4 flex items-center">Portals / Reporting ▼</a>
+                    <div class="absolute right-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-64 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">Portals / Reporting</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="hsser.html" class="text-blue-400 font-semibold block">HSSE Reporting</a></li>
+                            <li><a href="condolences.html" class="hover:text-blue-400 transition block">Condolences</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="relative group">
+                    <a href="index.html" class="hover:text-blue-400 transition py-4 flex items-center">About Us ▼</a>
+                    <div class="absolute left-0 top-[100%] hidden group-hover:block bg-[#111] text-gray-200 p-6 border border-gray-800 shadow-2xl rounded-xl z-50 w-56 -mt-1">
+                        <h4 class="font-bold text-white border-b border-gray-800 pb-2 mb-3">About Us</h4>
+                        <ul class="space-y-2 text-sm text-gray-400">
+                            <li><a href="headoffice.html" class="hover:text-blue-400 transition block">Head Office</a></li>
+                            <li><a href="mcontacts.html" class="hover:text-blue-400 transition block">Management Contacts</a></li>
+                            <li><a href="careers.html" class="hover:text-blue-400 transition block">Recruitment / Careers</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="hidden sm:block">
+                <a href="index.html#contact" class="bg-blue-600 text-white px-4 py-2 rounded font-semibold hover:bg-blue-700 transition">Get a Quote</a>
+            </div>
+
+            <button id="mobile-menu-btn" class="md:hidden block text-white focus:outline-none p-2">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+
+            <!-- Mobile Menu Dropdown -->
+            <div id="mobile-menu" class="hidden absolute top-[100%] left-0 right-0 bg-[#0B2240] border-t border-gray-700 p-6 space-y-4 shadow-xl z-50 max-h-[80vh] overflow-y-auto md:hidden">
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-400 mb-1">Services & Strategy</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="services.html" class="block py-1">Services</a></li>
+                        <li><a href="strategies.html" class="block py-1">Strategies</a></li>
+                    </ul>
+                </div>
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-400 mb-1">Media & News</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="insights.html" class="block py-1">Insights & News</a></li>
+                        <li><a href="circulars.html" class="block py-1">Circulars</a></li>
+                        <li><a href="teambriefing.html" class="block py-1">Team Briefing</a></li>
+                    </ul>
+                </div>
+                <div class="border-b border-gray-700 pb-2">
+                    <div class="font-bold text-blue-300 mb-1">Portals / Reporting</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-100">
+                        <li><a href="hsser.html" class="block py-1 font-semibold text-white">HSSE Reporting</a></li>
+                        <li><a href="condolences.html" class="block py-1 text-gray-300">Condolences</a></li>
+                    </ul>
+                </div>
+                <div class="pb-2">
+                    <div class="font-bold text-blue-400 mb-1">About Us</div>
+                    <ul class="pl-3 space-y-1 text-sm text-gray-300">
+                        <li><a href="headoffice.html" class="block py-1">Head Office</a></li>
+                        <li><a href="mcontacts.html" class="block py-1">Management Contacts</a></li>
+                        <li><a href="careers.html" class="block py-1">Recruitment / Careers</a></li>
+                    </ul>
+                </div>
+                <a href="index.html#contact" class="block text-center bg-blue-600 text-white px-4 py-2 rounded font-semibold">Get a Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Subpage Hero Block -->
+    <section class="relative bg-[#0B2240] text-white py-12 flex items-center justify-center bg-cover bg-center" style="background-image: linear-gradient(rgba(11, 34, 64, 0.85), rgba(11, 34, 64, 0.85)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?q=80&w=1600&auto=format&fit=crop');">
+        <div class="max-w-4xl text-center px-6">
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-2">HSSE Reporting Portal</h1>
+            <p class="text-sm md:text-base text-gray-300 max-w-2xl mx-auto">Vessel Marine Safety, Incident, and Near-Miss Regulatory Compliance Records</p>
+        </div>
+    </section>
+
+    <!-- Main Workspace Content -->
+    <main class="max-w-5xl mx-auto my-12 px-6 flex-grow w-full">
+        <div class="bg-white p-8 rounded-xl shadow-md border border-gray-100">
+            <h2 class="text-2xl font-bold text-[#0B2240] mb-6 border-b-2 border-orange-500 pb-2 inline-block">Vessel Incident & Near-Miss Log (Form S-101)</h2>
+            
+            <div class="bg-amber-50 border-l-4 border-amber-500 text-amber-900 p-4 mb-6 rounded-r-md flex gap-3 items-center">
+                <i class="fa-solid fa-triangle-exclamation text-lg"></i>
+                <p class="text-sm font-medium"><strong>ISM Code Directive:</strong> Under Clause 9 regulations, all distinct Near-Miss anomalies must be flagged ashored within 24 hours.</p>
+            </div>
+
+            <form action="#" method="POST" onsubmit="alert('Report Submitted Securely to DPA Office'); return false;" class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-sm mb-2 text-gray-700">Vessel Identity *</label>
+                        <input type="text" required placeholder="e.g. SMP MARINER" class="p-3 border border-gray-300 rounded-lg outline-none focus:border-[#0B2240]">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-sm mb-2 text-gray-700">Official IMO Fleet Registration *</label>
+                        <input type="text" required placeholder="e.g. 9123456" class="p-3 border border-gray-300 rounded-lg outline-none focus:border-[#0B2240]">
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-sm mb-2 text-gray-700">Report Classification *</label>
+                        <select required class="p-3 border border-gray-300 bg-white rounded-lg outline-none focus:border-[#0B2240]">
+                            <option value="">-- Select Category --</option>
+                            <option value="near-miss">Near-Miss Event</option>
+                            <option value="unsafe-act">Unsafe Operational Condition</option>
+                            <option value="machinery-damage">Technical Machinery Damage</option>
+                        </select>
+                    </div>
+                    <div class="flex flex-col">
+                        <label class="font-semibold text-sm mb-2 text-gray-700">Occurrence Timestamp (UTC) *</label>
+                        <input type="datetime-local" required class="p-3 border border-gray-300 rounded-lg outline-none focus:border-[#0B2240]">
+                    </div>
+                </div>
+                <div class="flex flex-col">
+                    <label class="font-semibold text-sm mb-2 text-gray-700">Comprehensive Event Analysis *</label>
+                    <textarea rows="5" required placeholder="Provide structural description of event, direct causes, and immediate structural actions executed onboard..." class="p-3 border border-gray-300 rounded-lg outline-none focus:border-[#0B2240]"></textarea>
+                </div>
+                <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition tracking-wide shadow-sm"><i class="fa-solid fa-paper-plane mr-2"></i>Dispatch Confidential Report</button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-[#0B2240] text-gray-400 text-center py-6 text-sm border-t-4 border-orange-500">
+        <p>&copy; 2026 SMP Global Management Group. Independent Marine Logistics Services.</p>
     </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
